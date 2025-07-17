@@ -1,34 +1,68 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function BlockchainInfo() {
+  const [selectedCard, setSelectedCard] = useState(null);
+
   const cards = [
     {
-      title: "Finanzas Descentralizadas",
-      text: "Acceso global a servicios financieros sin bancos.",
-      image: "/imagenes/DEFI.jpeg",
+      title: "Finanzas Descentralizadas (DeFi)",
+      text: "Accede a préstamos, ahorros y pagos sin bancos.",
+      image: "/imagenes/BlockCh/DEFI.jpeg",
+      description:
+        "Las Finanzas Descentralizadas (DeFi) permiten a cualquier persona acceder a productos financieros sin intermediarios tradicionales. Se utilizan contratos inteligentes en redes como Ethereum.",
+      extra: [
+        "✅ Préstamos sin bancos.",
+        "✅ Intereses ganados por staking o lending.",
+        "✅ Transferencias rápidas y globales.",
+        "🌍 Ejemplo: Un agricultor en zonas rurales puede acceder a crédito desde su teléfono móvil, sin necesidad de un banco local.",
+      ],
     },
     {
       title: "Identidad Digital",
-      text: "Controla tu identidad y protege tu información.",
-      image: "/imagenes/id.png",
+      text: "Gestiona tu identidad de forma segura.",
+      image: "/imagenes/BlockCh/id.png",
+      description:
+        "La identidad digital en blockchain permite que los usuarios controlen y validen su propia información personal sin depender de entidades centralizadas.",
+      extra: [
+        "🔐 Control total sobre tus datos.",
+        "🪪 Verificación sin necesidad de mostrar documentos físicos.",
+        "👤 Protege tu privacidad online.",
+        "🌍 Ejemplo: En votaciones digitales, tu identidad puede ser verificada sin riesgo de fraude.",
+      ],
     },
     {
-      title: "Trazabilidad",
-      text: "Transparencia total en cadenas de suministro.",
-      image: "/imagenes/trazabilidad.jpg",
+      title: "Trazabilidad en la Cadena de Suministro",
+      text: "Sigue el recorrido de un producto desde su origen.",
+      image: "/imagenes/BlockCh/trazabilidad.jpg",
+      description:
+        "Blockchain permite registrar cada paso en la cadena de producción de un bien, desde su origen hasta el consumidor final, de manera transparente e inmutable.",
+      extra: [
+        "📦 Registro del origen de cada producto.",
+        "🔍 Evita fraudes y falsificaciones.",
+        "🌿 Garantiza prácticas éticas (p. ej., comercio justo).",
+        "🌍 Ejemplo: Puedes verificar si un café es realmente orgánico desde la finca hasta la tienda.",
+      ],
     },
     {
       title: "Contratos Inteligentes",
-      text: "Acuerdos automatizados sin intermediarios.",
-      image: "/imagenes/contracts.webp",
+      text: "Automatiza acuerdos sin necesidad de confianza.",
+      image: "/imagenes/BlockCh/contracts.webp",
+      description:
+        "Los contratos inteligentes son programas que se ejecutan automáticamente cuando se cumplen ciertas condiciones, eliminando la necesidad de intermediarios o notarios.",
+      extra: [
+        "⚖️ Ejecución automática y transparente.",
+        "💸 Reducción de costos legales.",
+        "🔁 Aplicable en seguros, alquileres, pagos, etc.",
+        "🌍 Ejemplo: Alquiler de vivienda donde el pago libera la llave digital automáticamente.",
+      ],
     },
   ];
 
   return (
-    <section className="p-10 bg-gradient-to-b from-white to-gray-100 text-gray-900 min-h-screen">
-      {/* Título principal */}
+    <section className="p-6 md:p-10 bg-black text-white min-h-screen">
       <motion.h2
-        className="text-4xl md:text-5xl font-bold mb-8 text-center"
+        className="text-4xl md:text-5xl font-bold mb-10 text-center"
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -36,75 +70,93 @@ export default function BlockchainInfo() {
         ¿Qué es Blockchain?
       </motion.h2>
 
-      {/* Definición y descripción */}
-      <div className="max-w-4xl mx-auto">
-        <motion.p
-          className="text-gray-700 text-justify text-lg leading-relaxed"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          La tecnología Blockchain, o cadena de bloques, es una estructura de datos en la que la información se agrupa en conjuntos (bloques),
-          que luego se encadenan entre sí de forma segura y cronológica. Lo más destacado de la Blockchain es su capacidad para promover la transparencia, 
-          la seguridad y la descentralización en el manejo de datos.
-          <br /><br />
-          En su esencia, Blockchain es una tecnología de registro distribuido que permite a las partes realizar transacciones de manera segura y sin la necesidad de un intermediario.
-          Piénsalo como un libro de contabilidad digital, compartido y consensuado, donde cada participante en la red tiene acceso a una copia exacta del historial de transacciones.
-          Esto no solo asegura la integridad y la inmutabilidad de los datos, sino que también garantiza una transparencia sin precedentes.
-          <br /><br />
-        </motion.p>
+      <motion.p
+        className="max-w-4xl mx-auto text-gray-300 text-lg text-justify leading-relaxed"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        Blockchain es una tecnología que permite almacenar información de forma segura, descentralizada y transparente. Gracias a ella, podemos realizar transacciones o registrar datos sin depender de una sola entidad. Cada bloque contiene datos, un identificador y está conectado criptográficamente con el anterior, creando una cadena incorruptible.
+      </motion.p>
 
-        {/* Imagen decorativa más pequeña y centrada */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-10 flex justify-center"
-        >
-          <img
-            src="/imagenes/blockIma.jpg"
-            alt="Ilustración Blockchain"
-            className="w-350 rounded-xl shadow-md border border-gray-200"
-          />
-        </motion.div>
-
+      <div className="flex justify-center my-12">
+        <motion.img
+          src="/imagenes/BlockCh/blockIma.jpg"
+          alt="Ilustración Blockchain"
+          className="w-full max-w-md rounded-xl shadow-xl"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        />
       </div>
 
-      {/* Oportunidades */}
-      <div className="mt-20">
-        <motion.h3
-          className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-700"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          Oportunidades de la Blockchain
-        </motion.h3>
+      <motion.h3
+        className="text-3xl md:text-4xl font-bold text-center mb-12 text-white-400"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Oportunidades de la Blockchain
+      </motion.h3>
 
-        {/* Cards: 2 por fila */}
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto">
-          {cards.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto">
+        {cards.map((item, index) => (
+          <motion.div
+            key={index}
+            className="bg-gray-900 rounded-xl shadow-md p-6 cursor-pointer hover:scale-105 transition-transform duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            onClick={() => setSelectedCard(item)}
+          >
+            <div className="w-full h-48 overflow-hidden rounded-lg mb-4">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h4 className="text-xl font-semibold mb-2 text-white-300">{item.title}</h4>
+            <p className="text-gray-400 text-sm">{item.text}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Modal de información detallada */}
+      {selectedCard && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          onClick={() => setSelectedCard(null)}
+        >
+          <motion.div
+            className="bg-gray-800 p-6 rounded-xl shadow-2xl max-w-xl text-left relative overflow-y-auto max-h-[90vh]"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedCard.image}
+              alt={selectedCard.title}
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h3 className="text-2xl font-bold text-white-400 mb-3">{selectedCard.title}</h3>
+            <p className="text-gray-300 mb-4">{selectedCard.description}</p>
+            <ul className="list-disc pl-5 space-y-1 text-gray-400 text-sm">
+              {selectedCard.extra.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+            <button
+              onClick={() => setSelectedCard(null)}
+              className="absolute top-2 right-3 text-gray-400 hover:text-white text-xl"
             >
-              {/* Contenedor fijo para imagen con tamaño uniforme */}
-              <div className="w-full h-40 overflow-hidden rounded-lg mb-4">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h4 className="text-xl font-semibold mb-2 text-blue-600">{item.title}</h4>
-              <p className="text-gray-600 text-sm">{item.text}</p>
-            </motion.div>
-          ))}
+              ×
+            </button>
+          </motion.div>
         </div>
-      </div>
+      )}
     </section>
   );
 }

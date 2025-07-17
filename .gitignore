@@ -1,0 +1,38 @@
+# Ignorar dependencias
+node_modules/
+
+# Ignorar cachés y builds temporales
+.cache/
+dist/
+build/
+temp/
+tmp/
+
+# Archivos de entorno y configuración sensibles
+.env
+.env.*.local
+
+# Archivos de logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Salida de producción (Vite, Webpack, etc.)
+.vite/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Otros posibles directorios pesados
+coverage/
+*.tgz
+
+# Git LFS - si no lo usás, podés dejar esto o quitarlo
+*.lfs
