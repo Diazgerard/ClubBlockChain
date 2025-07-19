@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { Typewriter } from "./UI/TypeWriter.jsx";
 
 const topImages = ["1", "2", "4", "5"];
 const bottomImages = ["6", "10", "11", "13"];
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 sm:px-6 md:px-12">
+    <section className="relative min-h-screen text-white flex flex-col items-center justify-center px-4 sm:px-6 md:px-12">
 
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full bg-black/70 backdrop-blur-md z-30">
+      <nav className="absolute top-0 left-0 w-full  backdrop-blur-md z-30">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
           <img
             src="/imagenes/Utilities/unitec.png"
@@ -62,7 +63,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Título */}
+      {/* Título con Typewriter */}
       <motion.h1
         className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center relative z-20"
         initial={{ opacity: 0, y: -50 }}
@@ -70,7 +71,7 @@ export default function HeroSection() {
         transition={{ duration: 1 }}
         viewport={{ once: false }}
       >
-        Bienvenidos Estudiantes de UNITEC
+        <Typewriter text="Bienvenidos Estudiantes de UNITEC" speed={80} />
       </motion.h1>
 
       {/* Logo central */}

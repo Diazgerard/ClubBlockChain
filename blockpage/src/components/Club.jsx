@@ -107,6 +107,7 @@ export default function Club() {
         con profesionales de la industria.
       </motion.p>
 
+      
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {activities.map((activity, idx) => (
           <motion.div
@@ -126,6 +127,7 @@ export default function Club() {
           </motion.div>
         ))}
       </div>
+      
 
       {/* Modal */}
       <Dialog open={!!selected} onClose={() => setSelected(null)} className="relative z-50">
