@@ -1,5 +1,5 @@
 # Ignorar dependencias
-node_modules/
+/blockpage/node_modules/
 
 # Ignorar cachés y builds temporales
 .cache/
