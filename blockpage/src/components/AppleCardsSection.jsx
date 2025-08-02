@@ -60,26 +60,26 @@ const data = [
   {
     category: "The Blockchain Club",
     title: "Exploring Blockchain Technology",
-    src: "/imagenes/Actividades/2. ExploringBlock/POAP EB.png",
+    src: "/imagenes/Actividades/2. ExploringBlock/1.jpg",
     content: <DummyContent />,
   },
   {
     category: "The Blockchain Club",
     title: "Blockchain Club Meetup",
-    src: "/imagenes/Actividades/3. BlockMeetup/POAP.png",
+    src: "/imagenes/Actividades/3. BlockMeetup/Untitled.png",
     content: <DummyContent />,
   },
 
   {
     category: "ft Eth TGU",
     title: "Bootcamp Solidity",
-    src: "/imagenes/Actividades/4. BootcampSol/POAP.jpg",
+    src: "/imagenes/Actividades/4. BootcampSol/Untitled.png",
     content: <DummyContent />,
   },
   {
     category: "ft Asociacion de Finanzas",
     title: "Taller Crypto Wallet",
-    src: "/imagenes/Actividades/5. TallerCrypto/POAP.jpg",
+    src: "/imagenes/Actividades/5. TallerCrypto/POAP - Copy.jpg",
     content: <DummyContent />,
   },
   {
