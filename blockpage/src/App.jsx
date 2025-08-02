@@ -10,6 +10,7 @@ import {LampContainer, LampDemo} from "./components/UI/lamp";
 import {motion} from "motion/react";
 import {FloatingNav} from "./components/UI/floating-navbar";
 import {AppleCardsCarouselDemo} from "./components/AppleCardsSection";
+import {GlowingEffectDemoSecond} from "./components/GlowingEffectDemoSecond";
 
 function App() {
     return (
@@ -52,6 +53,7 @@ function App() {
                 </motion.p>
             </LampContainer>
 
+
             <div id="club" className="scroll-mt-20">
                 <Club />
             </div>
@@ -61,9 +63,10 @@ function App() {
             </div>
 
             <div id="blockchain" className="scroll-mt-20">
-                {/* <BlockchainInfo /> */}
-                <AppleCardsCarouselDemo />
+                <BlockchainInfo />
             </div>
+            <GlowingEffectDemoSecond />
+            <AppleCardsCarouselDemo />
 
             <div id="form" className="scroll-mt-20">
                 <Formulario />
