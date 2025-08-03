@@ -53,9 +53,9 @@ function App() {
                 </motion.p>
             </LampContainer>
 
-            <div id="club" className="scroll-mt-20">
+            {/* <div id="club" className="scroll-mt-20">
                 <Club />
-            </div>
+            </div> */}
 
             <div id="evento" className="scroll-mt-20">
                 <Evento />
