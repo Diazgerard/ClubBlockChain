@@ -53,7 +53,6 @@ function App() {
                 </motion.p>
             </LampContainer>
 
-
             <div id="club" className="scroll-mt-20">
                 <Club />
             </div>
@@ -62,11 +61,17 @@ function App() {
                 <Evento />
             </div>
 
-            <div id="blockchain" className="scroll-mt-20">
+            {/* <div id="blockchain" className="scroll-mt-20">
                 <BlockchainInfo />
+            </div> */}
+
+            <div id="glowing-effect" className="scroll-mt-20">
+                <GlowingEffectDemoSecond />
             </div>
-            <GlowingEffectDemoSecond />
-            <AppleCardsCarouselDemo />
+
+            <div id="apple-cards" className="scroll-mt-20">
+                <AppleCardsCarouselDemo />
+            </div>
 
             <div id="form" className="scroll-mt-20">
                 <Formulario />
