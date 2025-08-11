@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaArrowDown } from "react-icons/fa";
+import { CometCard } from "./UI/comet-card"; 
+import { Label } from "./UI/label"; 
+import { Input } from "./UI/input";
+import {cn} from "../lib/utils.ts";
 import emailjs from "@emailjs/browser";
 
 export default function Formulario() {
@@ -77,67 +81,73 @@ export default function Formulario() {
 
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-gray-900 p-8 rounded-2xl shadow-xl space-y-6 mb-12"
+        className="w-full max-w-md  p-8 rounded-2xl shadow-xl space-y-6 mb-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <div>
-          <label className="block mb-2 text-sm text-gray-300">Nombre Completo</label>
-          <input
-            type="text"
+          <Label htmlFor="nombre">Nombre</Label>
+          <Input
+            id="nombre"
             name="nombre"
             value={form.nombre}
             onChange={handleChange}
-            required
-            className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Tu nombre"
+            inputmode="text"
+            className={cn("focus:shadow-__shadow-input")}
           />
         </div>
 
         <div>
-          <label className="block mb-2 text-sm text-gray-300">Número de Cuenta</label>
-          <input
-            type="text"
+          <Label htmlFor="cuenta">Numero de Cuenta</Label>
+          <Input
+            id="cuenta"
             name="cuenta"
             value={form.cuenta}
             onChange={handleChange}
-            required
-            inputMode="numeric"
-            className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="12219412"
+            inputmode="numeric"
+            className={cn("focus:shadow-__shadow-input")}
           />
         </div>
 
         <div>
-          <label className="block mb-2 text-sm text-gray-300">Carrera</label>
-          <input
-            type="text"
+          <Label htmlFor="cuenta">Carrera</Label>
+          <Input
+            id="carrera"
             name="carrera"
             value={form.carrera}
             onChange={handleChange}
-            required
-            className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Carrera de Pregrado"
+            inputmode="text"
+            className={cn("focus:shadow-__shadow-input")}
           />
         </div>
 
         <div>
-          <label className="block mb-2 text-sm text-gray-300">Número Telefónico</label>
-          <input
-            type="tel"
+          <Label htmlFor="cuenta">Numero Telefónico</Label>
+          <Input
+            id="telefono"
             name="telefono"
-            placeholder="0000-0000"
             value={form.telefono}
             onChange={handleChange}
-            required
-            className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="0000-0000"
+            inputmode="numeric"
+            className={cn("focus:shadow-__shadow-input")}
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+          className="relative inline-flex h-12 w-full overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
-          Enviar
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-sm font-semibold text-white backdrop-blur-3xl">
+            Enviar
+          </span>
         </button>
+
       </motion.form>
 
       {/* Título Tienda del Club */}
@@ -156,11 +166,14 @@ export default function Formulario() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <img
-          src="/imagenes/Utilities/camisa1.jpeg"
-          alt="Camisa 1"
-          className="w-64 h-64 object-cover rounded-xl shadow-lg"
-        />
+        <CometCard className="w-64 h-64 p-2">
+          <img
+            src="/imagenes/Utilities/camisa1.jpeg"
+            alt="Camisa 1"
+            className="w-full h-full object-cover rounded-xl"
+            draggable={false}
+          />
+        </CometCard>
 
         <motion.div
           className="text-white text-4xl"
@@ -170,21 +183,28 @@ export default function Formulario() {
           <FaArrowDown />
         </motion.div>
 
-        <img
-          src="/imagenes/Utilities/camisa2.jpeg"
-          alt="Camisa 2"
-          className="w-64 h-64 object-cover rounded-xl shadow-lg"
-        />
+        <CometCard className="w-64 h-64 p-2">
+          <img
+            src="/imagenes/Utilities/camisa2.jpeg"
+            alt="Camisa 2"
+            className="w-full h-full object-cover rounded-xl"
+            draggable={false}
+          />
+        </CometCard>
       </motion.div>
 
       <a
-        href="https://tally.so/r/w4p1bo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300"
-      >
+      href="https://tally.so/r/w4p1bo"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+    >
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+      <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-sm font-semibold text-white backdrop-blur-3xl">
         Ir a la Tienda del Club
-      </a>
+      </span>
+    </a>
+
     </section>
   );
 }
