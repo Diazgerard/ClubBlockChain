@@ -60,7 +60,7 @@ export default function Formulario() {
 
 
   return (
-    <section className="p-10 bg-black text-white min-h-screen flex flex-col items-center">
+    <section className="px-10 pt-10 pb-24 bg-black text-white min-h-screen flex flex-col items-center">
       <motion.h2
         className="text-4xl md:text-5xl font-bold mb-4 text-center"
         initial={{ y: -50, opacity: 0 }}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BackgroundGradient } from "./UI/background-gradient";
 
 export default function Evento() {
   return (
@@ -15,42 +16,55 @@ export default function Evento() {
       {/* Imágenes superiores */}
       <div className="flex flex-row flex-wrap gap-4 justify-center items-center mb-8">
         {["12", "14", "3"].map((img, i) => (
-          <motion.img
-            key={i}
-            src={`/imagenes/Stickers/${img}.jpg`}
-            alt={`Imagen ${i + 1}`}
-            className="w-24 sm:w-28 md:w-32 h-auto object-cover rounded-lg rotate-45"
-            whileHover={{ scale: 1.05 }}
-          />
+          <BackgroundGradient 
+            key={i} 
+            className="w-fit"
+            containerClassName="p-[1px] rounded-lg inline-block"
+          >
+            <img
+              src={`/imagenes/Stickers/${img}.jpg`}
+              alt={`Imagen ${i + 1}`}
+              className="w-24 sm:w-32 md:w-36 object-cover rounded-lg"
+            />
+          </BackgroundGradient>
         ))}
       </div>
 
       {/* Texto y evento */}
       <div className="text-center mb-10 max-w-lg px-2">
         <p className="text-xl sm:text-2xl font-semibold mb-4 text-gray-300">¡Muy pronto!</p>
-        <img
-          src=""
-          alt="Próximo Evento!!"
-          className="w-150 max-w-md h-auto object-cover rounded-xl mx-auto border-2 border-gray-700"
-        />
+        <BackgroundGradient className="w-full max-w-md mx-auto">
+          <img
+            src="/imagenes/Utilities/Logo CB.png"
+            alt="Próximo Evento!!"
+            className="w-full h-auto object-cover rounded-xl"
+          />
+        </BackgroundGradient>
         <a
           href="#form"
-          className="mt-6 inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+          className="mt-6 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
-          Regístrate
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-sm font-semibold text-white backdrop-blur-3xl">
+            Regístrate
+          </span>
         </a>
       </div>
 
       {/* Imágenes inferiores */}
       <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
         {["7", "8", "9"].map((img, i) => (
-          <motion.img
-            key={i}
-            src={`/imagenes/Stickers/${img}.jpg`}
-            alt={`Imagen ${i + 4}`}
-            className="w-24 sm:w-28 md:w-32 h-auto object-cover rounded-lg -rotate-45"
-            whileHover={{ scale: 1.05 }}
-          />
+          <BackgroundGradient 
+            key={i} 
+            className="w-fit"
+            containerClassName="p-[1px] rounded-lg inline-block"
+          >
+            <img
+              src={`/imagenes/Stickers/${img}.jpg`}
+              alt={`Imagen ${i + 4}`}
+              className="w-24 sm:w-32 md:w-36 object-cover rounded-lg"
+            />
+          </BackgroundGradient>
         ))}
       </div>
     </section>

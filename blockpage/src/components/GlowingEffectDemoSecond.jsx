@@ -4,8 +4,7 @@ import { GlowingEffect } from "./UI/glowing-effect";
 
 export function GlowingEffectDemoSecond() {
   return (
-    <ul
-      className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 bg-black p-4 md:p-6 xl:p-8">
+    <ul className="grid grid-cols-1 grid-rows-none gap-2 md:grid-cols-12 md:grid-rows-3 lg:gap-3 xl:max-h-[28rem] xl:grid-rows-2 bg-black -mt-20"> {/* Añadido -mt-20 y reducido max-h */}
       <GridItem
         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
         icon={<Wallet className="h-4 w-4 text-white" />}
