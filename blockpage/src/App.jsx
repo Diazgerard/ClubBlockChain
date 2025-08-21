@@ -20,10 +20,11 @@ function App() {
             <FloatingNav
                 navItems={[
                     {link: "#club", icon: "🏠", name: "Club"},
-                    {link: "#evento", icon: "📅", name: "Evento"},
                     {link: "#blockchain", icon: "🔗", name: "Blockchain"},
+                    {link: "#evento", icon: "📅", name: "Evento"},
+                    {link: "#actividades", icon: "🎉", name: "Actividades"},
                     {link: "#form", icon: "📝", name: "Formulario"},
-                    {link: "#ethereum", icon: "🪙", name: "Ethereum"},
+                    // {link: "#ethereum", icon: "🪙", name: "Ethereum"},
                 ]}
             />
             <LampContainer>
@@ -57,7 +58,7 @@ function App() {
                 <Club />
             </div> }
 
-            <div id="glowing-effect" className="scroll-mt-20">
+            <div id="blockchain" className="scroll-mt-20">
                 <GlowingEffectDemoSecond />
             </div>
 
@@ -69,7 +70,7 @@ function App() {
                 <BlockchainInfo />
             </div> */}
 
-            <div id="apple-cards" className="scroll-mt-20">
+            <div id="actividades" className="scroll-mt-20">
                 <AppleCardsCarouselDemo />
             </div>
 
