@@ -166,15 +166,20 @@ export const Card = ({card, index, layout = false}) => {
                     </div>
                 )}
             </AnimatePresence>
-            <motion.button layoutId={layout ? `card-${card.title}` : undefined} onClick={handleOpen} className="relative z-10 flex h-96 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-neutral-900 md:h-[40rem] md:w-96 ">
+            <motion.button layoutId={layout ? `card-${card.title}` : undefined} onClick={handleOpen} className="relative z-10 flex h-96 w-56 flex-col justify-between overflow-hidden rounded-3xl bg-neutral-900 md:h-[40rem] md:w-96 ">
                 <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
-                <div className="relative z-40 p-8">
+                <div className="relative z-40 p-8 self-start">
                     <motion.p layoutId={layout ? `category-${card.category}` : undefined} className="text-left font-sans text-sm font-medium text-white md:text-base">
                         {card.category}
                     </motion.p>
                     <motion.p layoutId={layout ? `title-${card.title}` : undefined} className="mt-2 max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl">
                         {card.title}
                     </motion.p>
+                </div>
+                <div className="relative z-40 p-8 pt-0 self-center">
+                    <div className="inline-flex items-center justify-center px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-lg border border-white/20 rounded-full transition-all duration-300 opacity-80 hover:opacity-100">
+                        <span className="text-white text-sm font-medium">Click to know more</span>
+                    </div>
                 </div>
                 <BlurImage src={card.src} alt={card.title} fill className="absolute inset-0 z-10 object-cover" />
             </motion.button>
