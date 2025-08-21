@@ -94,8 +94,8 @@ export default function Club() {
   ];
 
   return (
-    <div className="bg-black">
-      <section className="p-10 pb-0 text-white min-h-[80vh]"> {/* Reducido de min-h-screen a min-h-[80vh] */}
+    <div className="bg-black pb-16 md:pb-24">
+      <section className="p-6 md:p-10 text-white">
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-6 text-center"
           initial={{ y: -50, opacity: 0 }}
@@ -105,8 +105,10 @@ export default function Club() {
           Club de Blockchain UNITEC
         </motion.h2>
 
-        <div className="mt-10">
-          <StickyScroll content={content} />
+        <div className="mt-10 max-w-7xl mx-auto">
+          <div className="relative">
+            <StickyScroll content={content} />
+          </div>
         </div>
       </section>
     </div>
