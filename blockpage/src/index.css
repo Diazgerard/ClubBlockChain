@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global font configuration */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Estilos globales del scroll */
 /* Hide scrollbar visually when idle; show while user is scrolling.
    Keep the same visual styling when visible.
