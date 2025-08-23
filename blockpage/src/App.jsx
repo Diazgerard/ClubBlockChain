@@ -54,15 +54,15 @@ function App() {
                 </motion.p>
             </LampContainer>
 
-            { <div id="club" className="scroll-mt-20">
+            { <div id="club" className="scroll-mt-20 my-16">
                 <Club />
             </div> }
 
-            <div id="blockchain" className="scroll-mt-20">
+            <div id="blockchain" className="scroll-mt-20 my-16 px-6 md:px-16">
                 <GlowingEffectDemoSecond />
             </div>
 
-            <div id="evento" className="scroll-mt-20">
+            <div id="evento" className="scroll-mt-20 my-16">
                 <Evento />
             </div>
 
@@ -70,11 +70,11 @@ function App() {
                 <BlockchainInfo />
             </div> */}
 
-            <div id="actividades" className="scroll-mt-20">
+            <div id="actividades" className="scroll-mt-20 my-16">
                 <AppleCardsCarouselDemo />
             </div>
 
-            <div id="form" className="scroll-mt-20">
+            <div id="form" className="scroll-mt-20 my-16">
                 <Formulario />
             </div>
 
