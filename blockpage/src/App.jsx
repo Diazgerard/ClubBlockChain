@@ -38,7 +38,7 @@ function App() {
                     }}
                     className="mt-1 text-white py-4 text-center text-4xl font-bold tracking-tight md:text-7xl"
                 >
-                    Welcome to <br /> The Blockchain Club
+                    Welcome to<br />The Blockchain Club
                 </motion.h1>
                 <motion.p
                     initial={{opacity: 0.5, y: 50}}
