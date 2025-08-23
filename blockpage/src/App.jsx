@@ -36,9 +36,13 @@ function App() {
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
-                    className="mt-1 text-white py-4 text-center text-4xl font-bold tracking-tight md:text-7xl"
+                    className="mb-1 text-white py-4 text-center text-4xl font-bold tracking-tight md:text-7xl"
                 >
-                    Welcome to<br />The Blockchain Club
+                    <img
+                        src="/imagenes/Logo CB.png"
+                        alt="The Blockchain Club logo"
+                        className="mx-auto w-40 md:w-72 lg:w-96"
+                    />
                 </motion.h1>
                 <motion.p
                     initial={{opacity: 0.5, y: 50}}
@@ -48,7 +52,7 @@ function App() {
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
-                    className="mt-6 text-white text-center text-lg font-medium tracking-tight md:text-xl max-w-2xl"
+                    className="mb-[6rem] text-white text-center text-lg font-medium tracking-tight md:text-xl max-w-2xl"
                 >
                     Discover the future of blockchain technology and join our community of innovators
                 </motion.p>
