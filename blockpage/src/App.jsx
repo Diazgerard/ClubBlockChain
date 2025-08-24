@@ -41,7 +41,7 @@ function App() {
                     <img
                         src="/imagenes/Logo CB.png"
                         alt="The Blockchain Club logo"
-                        className="mx-auto w-40 md:w-72 lg:w-96"
+                        className="mx-auto w-200 md:w-72 lg:w-96"
                     />
                 </motion.h1>
                 <motion.p
