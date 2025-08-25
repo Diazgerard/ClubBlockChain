@@ -9,25 +9,25 @@ import emailjs from "@emailjs/browser";
 
 export default function Formulario() {
   const [form, setForm] = useState({
-    nombre: "",
-    cuenta: "",
-    carrera: "",
-    telefono: "",
+    name: "",
+    account: "",
+    career: "",
+    phone: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "cuenta" && !/^\d*$/.test(value)) return;
+    if (name === "account" && !/^\d*$/.test(value)) return;
 
-    if (name === "telefono") {
+    if (name === "phone") {
       
       const numeros = value.replace(/\D/g, "");
       let telefonoFormateado = numeros;
       if (numeros.length > 4) {
         telefonoFormateado = numeros.slice(0, 4) + "-" + numeros.slice(4, 8);
       }
-      setForm({ ...form, telefono: telefonoFormateado });
+      setForm({ ...form, phone: telefonoFormateado });
       return;
     }
 
@@ -37,24 +37,24 @@ export default function Formulario() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { nombre, cuenta, carrera, telefono } = form;
+    const { name, account, career, phone } = form;
 
     
-    if (!nombre || !cuenta || !carrera || !telefono) return;
+    if (!name || !account || !career || !phone) return;
 
     emailjs
       .send(
         "service_vrwn56n",
         "template_nuo7tn6",
-        { nombre, cuenta, carrera, telefono },
+        { nombre: name, cuenta: account, carrera: career, telefono: phone },
         "q7rx8q4uQV9vYD2Jv"
       )
       .then(() => {
-        setForm({ nombre: "", cuenta: "", carrera: "", telefono: "" });
+        setForm({ name: "", account: "", career: "", phone: "" });
       })
       .catch((err) => {
-        console.error("Error al enviar:", err);
-        alert("Hubo un problema al enviar el formulario.");
+        console.error("Error sending:", err);
+        alert("There was a problem sending the form.");
       });
   };
 
@@ -67,7 +67,7 @@ export default function Formulario() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Regístrate para ser parte del Blockchain Club
+        Register to be part of the Blockchain Club
       </motion.h2>
 
       <motion.p
@@ -76,7 +76,7 @@ export default function Formulario() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        Completa este formulario para formar parte de nuestra comunidad.
+        Complete this form to become part of our community.
       </motion.p>
 
       <motion.form
@@ -87,24 +87,24 @@ export default function Formulario() {
         transition={{ duration: 0.8 }}
       >
         <div>
-          <Label htmlFor="nombre">Nombre</Label>
+          <Label htmlFor="name">Name</Label>
           <Input
-            id="nombre"
-            name="nombre"
-            value={form.nombre}
+            id="name"
+            name="name"
+            value={form.name}
             onChange={handleChange}
-            placeholder="Tu nombre"
+            placeholder="Your name"
             inputmode="text"
             className={cn("focus:shadow-__shadow-input")}
           />
         </div>
 
         <div>
-          <Label htmlFor="cuenta">Numero de Cuenta</Label>
+          <Label htmlFor="account">Account Number</Label>
           <Input
-            id="cuenta"
-            name="cuenta"
-            value={form.cuenta}
+            id="account"
+            name="account"
+            value={form.account}
             onChange={handleChange}
             placeholder="12219412"
             inputmode="numeric"
@@ -113,24 +113,24 @@ export default function Formulario() {
         </div>
 
         <div>
-          <Label htmlFor="cuenta">Carrera</Label>
+          <Label htmlFor="career">Career</Label>
           <Input
-            id="carrera"
-            name="carrera"
-            value={form.carrera}
+            id="career"
+            name="career"
+            value={form.career}
             onChange={handleChange}
-            placeholder="Carrera de Pregrado"
+            placeholder="Undergraduate Career"
             inputmode="text"
             className={cn("focus:shadow-__shadow-input")}
           />
         </div>
 
         <div>
-          <Label htmlFor="cuenta">Numero Telefónico</Label>
+          <Label htmlFor="phone">Phone Number</Label>
           <Input
-            id="telefono"
-            name="telefono"
-            value={form.telefono}
+            id="phone"
+            name="phone"
+            value={form.phone}
             onChange={handleChange}
             placeholder="0000-0000"
             inputmode="numeric"
@@ -144,20 +144,20 @@ export default function Formulario() {
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-sm font-semibold text-white backdrop-blur-3xl">
-            Enviar
+            Send
           </span>
         </button>
 
       </motion.form>
 
-      {/* Título Tienda del Club */}
+      {/* Club Store Title */}
       <motion.h3
         className="text-3xl font-bold mb-6 mt-8 text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        Tienda del Club
+        Club Store
       </motion.h3>
 
       <motion.div
@@ -169,7 +169,7 @@ export default function Formulario() {
         <CometCard className="w-64 h-64 p-2">
           <img
             src="/imagenes/Utilities/camisa1.jpeg"
-            alt="Camisa 1"
+            alt="Shirt 1"
             className="w-full h-full object-cover rounded-xl"
             draggable={false}
           />
@@ -186,7 +186,7 @@ export default function Formulario() {
         <CometCard className="w-64 h-64 p-2">
           <img
             src="/imagenes/Utilities/camisa2.jpeg"
-            alt="Camisa 2"
+            alt="Shirt 2"
             className="w-full h-full object-cover rounded-xl"
             draggable={false}
           />
@@ -201,7 +201,7 @@ export default function Formulario() {
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
       <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-sm font-semibold text-white backdrop-blur-3xl">
-        Ir a la Tienda del Club
+        Go to Club Store
       </span>
     </a>
 

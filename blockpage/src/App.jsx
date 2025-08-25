@@ -11,19 +11,20 @@ import {motion} from "motion/react";
 import {FloatingNav} from "./components/UI/floating-navbar";
 import {AppleCardsCarouselDemo} from "./components/AppleCardsSection";
 import {GlowingEffectDemoSecond} from "./components/GlowingEffectDemoSecond";
+import Footer from "./components/Footer";
 
 function App() {
     return (
-        <div className="App scroll-smooth overflow-x-hidden bg-black text-white">
+        <div id="home"className="App scroll-smooth overflow-x-hidden bg-black text-white">
             {/* <HeroSection /> */}
 
             <FloatingNav
                 navItems={[
                     {link: "#club", icon: "🏠", name: "Club"},
                     {link: "#blockchain", icon: "🔗", name: "Blockchain"},
-                    {link: "#evento", icon: "📅", name: "Evento"},
-                    {link: "#actividades", icon: "🎉", name: "Actividades"},
-                    {link: "#form", icon: "📝", name: "Formulario"},
+                    {link: "#evento", icon: "📅", name: "Events"},
+                    {link: "#actividades", icon: "🎉", name: "Activities"},
+                    {link: "#form", icon: "📝", name: "Form"},
                     // {link: "#ethereum", icon: "🪙", name: "Ethereum"},
                 ]}
             />
@@ -81,6 +82,8 @@ function App() {
             <div id="form" className="scroll-mt-20 my-16">
                 <Formulario />
             </div>
+
+            <Footer />
 
             {/*<div id="ethereum" className="scroll-mt-20">
                 <EthereumInfo />

@@ -10,33 +10,16 @@ export default function Evento() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Próximo Evento del Club
+        Next Club Event
       </motion.h2>
-
-      {/* Imágenes superiores */}
-      <div className="flex flex-row flex-wrap gap-4 justify-center items-center mb-8">
-        {["12", "14", "3"].map((img, i) => (
-          <BackgroundGradient 
-            key={i} 
-            className="w-fit"
-            containerClassName="p-[1px] rounded-lg inline-block"
-          >
-            <img
-              src={`/imagenes/Stickers/${img}.jpg`}
-              alt={`Imagen ${i + 1}`}
-              className="w-24 sm:w-32 md:w-36 object-cover rounded-lg"
-            />
-          </BackgroundGradient>
-        ))}
-      </div>
 
       {/* Texto y evento */}
       <div className="text-center mb-10 max-w-lg px-2">
-        <p className="text-xl sm:text-2xl font-semibold mb-4 text-gray-300">¡Muy pronto!</p>
+        <p className="text-xl sm:text-2xl font-semibold mb-4 text-gray-300">Coming Soon!</p>
         <BackgroundGradient className="w-full max-w-md mx-auto">
           <img
             src="/imagenes/Utilities/Logo CB.png"
-            alt="Próximo Evento!!"
+            alt="Next Event!!"
             className="w-full h-auto object-cover rounded-xl"
           />
         </BackgroundGradient>
@@ -46,26 +29,9 @@ export default function Evento() {
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-sm font-semibold text-white backdrop-blur-3xl">
-            Regístrate
+            Register
           </span>
         </a>
-      </div>
-
-      {/* Imágenes inferiores */}
-      <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
-        {["7", "8", "9"].map((img, i) => (
-          <BackgroundGradient 
-            key={i} 
-            className="w-fit"
-            containerClassName="p-[1px] rounded-lg inline-block"
-          >
-            <img
-              src={`/imagenes/Stickers/${img}.jpg`}
-              alt={`Imagen ${i + 4}`}
-              className="w-24 sm:w-32 md:w-36 object-cover rounded-lg"
-            />
-          </BackgroundGradient>
-        ))}
       </div>
     </section>
   );

@@ -30,11 +30,11 @@ export const LinkPreview = ({
               transition={{ duration: 0.2 }}
               className="absolute left-0 top-full mt-2 z-50"
             >
-              <div className="bg-gray-900 p-1 rounded-lg shadow-xl">
+              <div className="bg-white p-4 rounded-xl shadow-2xl border border-gray-300 w-56 h-56 flex items-center justify-center">
                 <img 
                   src={imageSrc} 
                   alt="Social Media Preview"
-                  className="w-64 h-auto rounded" // Changed from w-48 to w-64
+                  className="max-w-full max-h-full object-contain rounded-lg"
                 />
               </div>
             </motion.div>

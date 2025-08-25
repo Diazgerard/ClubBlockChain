@@ -10,13 +10,13 @@ export default function Club() {
 
   const content = [
     {
-      title: "Club de Blockchain",
+      title: "Blockchain Club",
       description:
-        "El Club de Blockchain de UNITEC fue creado para empoderar a los estudiantes con conocimiento práctico en tecnologías descentralizadas como Ethereum. Participar en el club permite acceso a talleres, charlas, proyectos colaborativos y networking con profesionales de la industria.",
+        "The UNITEC Blockchain Club was created to empower students with practical knowledge in decentralized technologies like Ethereum. Participating in the club provides access to workshops, talks, collaborative projects, and networking with industry professionals.",
       content: (
         <img
           src="/imagenes/Utilities/Logo CB.png"
-          alt="Club de Blockchain"
+          alt="Blockchain Club"
           className="h-full w-full object-cover"
         />
       ),
@@ -26,16 +26,15 @@ export default function Club() {
       description: (
         <div className="space-y-4">
           <p>
-            Ethereum Tegucigalpa es una comunidad local dedicada a promover el
-            conocimiento, desarrollo y adopción del ecosistema Ethereum en
-            Honduras. Nos enfocamos en la educación sobre tecnologías
-            descentralizadas, contratos inteligentes y herramientas web3.
+            Ethereum Tegucigalpa is a local community dedicated to promoting
+            knowledge, development, and adoption of the Ethereum ecosystem in
+            Honduras. We focus on education about decentralized technologies,
+            smart contracts, and web3 tools.
           </p>
           <p>
-            Organizamos charlas, talleres, meetups y colaboraciones con
-            universidades e instituciones para expandir las oportunidades en
-            blockchain y empoderar a nuevo desarrolladores y emprendedores en la
-            región.
+            We organize talks, workshops, meetups, and collaborations with
+            universities and institutions to expand blockchain opportunities
+            and empower new developers and entrepreneurs in the region.
           </p>
           <div className="flex gap-4 pt-2">
             <LinkPreview 
@@ -68,9 +67,9 @@ export default function Club() {
       ),
     },
     {
-      title: "¿Qué es Blockchain?",
+      title: "What is Blockchain?",
       description:
-        "Blockchain es una tecnología de registro distribuido que permite almacenar información de manera segura, transparente e inmutable. Funciona como una cadena de bloques que contiene datos y está diseñada para evitar su alteración, haciendo que cada transacción sea verificable y permanente.",
+        "Blockchain is a distributed ledger technology that allows information to be stored securely, transparently, and immutably. It works as a chain of blocks containing data and is designed to prevent alteration, making each transaction verifiable and permanent.",
       content: (
         <img
           src="/imagenes/Utilities/block1.png"
@@ -80,13 +79,13 @@ export default function Club() {
       ),
     },
     {
-      title: "¿Por qué es importante Blockchain?",
+      title: "Why is Blockchain Important?",
       description:
-        "Blockchain está revolucionando múltiples industrias al proporcionar transparencia, seguridad y descentralización. Su importancia radica en su capacidad para eliminar intermediarios, reducir costos, aumentar la eficiencia y crear nuevos modelos de negocio en sectores como finanzas, logística, salud y más.",
+        "Blockchain is revolutionizing multiple industries by providing transparency, security, and decentralization. Its importance lies in its ability to eliminate intermediaries, reduce costs, increase efficiency, and create new business models in sectors like finance, logistics, healthcare, and more.",
       content: (
         <img
           src="/imagenes/Stickers/2.png"
-          alt="Importancia del Blockchain"
+          alt="Blockchain Importance"
           className="h-full w-full object-cover"
         />
       ),
@@ -102,7 +101,7 @@ export default function Club() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Club de Blockchain UNITEC
+          UNITEC Blockchain Club
         </motion.h2>
 
         <div className="mt-10 max-w-7xl mx-auto">

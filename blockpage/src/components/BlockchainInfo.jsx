@@ -6,55 +6,55 @@ export default function BlockchainInfo() {
 
   const cards = [
     {
-      title: "Finanzas Descentralizadas (DeFi)",
-      text: "Accede a préstamos, ahorros y pagos sin bancos.",
+      title: "Decentralized Finance (DeFi)",
+      text: "Access loans, savings and payments without banks.",
       image: "/imagenes/BlockCh/DEFI.jpeg",
       description:
-        "Las Finanzas Descentralizadas (DeFi) permiten a cualquier persona acceder a productos financieros sin intermediarios tradicionales. Se utilizan contratos inteligentes en redes como Ethereum.",
+        "Decentralized Finance (DeFi) allows anyone to access financial products without traditional intermediaries. Smart contracts are used on networks like Ethereum.",
       extra: [
-        "✅ Préstamos sin bancos.",
-        "✅ Intereses ganados por staking o lending.",
-        "✅ Transferencias rápidas y globales.",
-        "🌍 Ejemplo: Un agricultor en zonas rurales puede acceder a crédito desde su teléfono móvil, sin necesidad de un banco local.",
+        "✅ Loans without banks.",
+        "✅ Interest earned through staking or lending.",
+        "✅ Fast and global transfers.",
+        "🌍 Example: A farmer in rural areas can access credit from their mobile phone, without needing a local bank.",
       ],
     },
     {
-      title: "Identidad Digital",
-      text: "Gestiona tu identidad de forma segura.",
+      title: "Digital Identity",
+      text: "Manage your identity securely.",
       image: "/imagenes/BlockCh/id.png",
       description:
-        "La identidad digital en blockchain permite que los usuarios controlen y validen su propia información personal sin depender de entidades centralizadas.",
+        "Digital identity on blockchain allows users to control and validate their own personal information without depending on centralized entities.",
       extra: [
-        "🔐 Control total sobre tus datos.",
-        "🪪 Verificación sin necesidad de mostrar documentos físicos.",
-        "👤 Protege tu privacidad online.",
-        "🌍 Ejemplo: En votaciones digitales, tu identidad puede ser verificada sin riesgo de fraude.",
+        "🔐 Full control over your data.",
+        "🪪 Verification without needing to show physical documents.",
+        "👤 Protect your online privacy.",
+        "🌍 Example: In digital voting, your identity can be verified without risk of fraud.",
       ],
     },
     {
-      title: "Trazabilidad en la Cadena de Suministro",
-      text: "Sigue el recorrido de un producto desde su origen.",
+      title: "Supply Chain Traceability",
+      text: "Track a product's journey from its origin.",
       image: "/imagenes/BlockCh/trazabilidad.jpg",
       description:
-        "Blockchain permite registrar cada paso en la cadena de producción de un bien, desde su origen hasta el consumidor final, de manera transparente e inmutable.",
+        "Blockchain allows recording every step in a product's production chain, from its origin to the final consumer, in a transparent and immutable way.",
       extra: [
-        "📦 Registro del origen de cada producto.",
-        "🔍 Evita fraudes y falsificaciones.",
-        "🌿 Garantiza prácticas éticas (p. ej., comercio justo).",
-        "🌍 Ejemplo: Puedes verificar si un café es realmente orgánico desde la finca hasta la tienda.",
+        "📦 Recording the origin of each product.",
+        "🔍 Prevents fraud and counterfeiting.",
+        "🌿 Guarantees ethical practices (e.g., fair trade).",
+        "🌍 Example: You can verify if coffee is truly organic from farm to store.",
       ],
     },
     {
-      title: "Contratos Inteligentes",
-      text: "Automatiza acuerdos sin necesidad de confianza.",
+      title: "Smart Contracts",
+      text: "Automate agreements without needing trust.",
       image: "/imagenes/BlockCh/contracts.webp",
       description:
-        "Los contratos inteligentes son programas que se ejecutan automáticamente cuando se cumplen ciertas condiciones, eliminando la necesidad de intermediarios o notarios.",
+        "Smart contracts are programs that execute automatically when certain conditions are met, eliminating the need for intermediaries or notaries.",
       extra: [
-        "⚖️ Ejecución automática y transparente.",
-        "💸 Reducción de costos legales.",
-        "🔁 Aplicable en seguros, alquileres, pagos, etc.",
-        "🌍 Ejemplo: Alquiler de vivienda donde el pago libera la llave digital automáticamente.",
+        "⚖️ Automatic and transparent execution.",
+        "💸 Reduction of legal costs.",
+        "🔁 Applicable in insurance, rentals, payments, etc.",
+        "🌍 Example: Housing rental where payment automatically releases the digital key.",
       ],
     },
   ];
@@ -67,7 +67,7 @@ export default function BlockchainInfo() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        ¿Qué es Blockchain?
+        What is Blockchain?
       </motion.h2>
 
       <motion.p
@@ -76,13 +76,13 @@ export default function BlockchainInfo() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        Blockchain es una tecnología que permite almacenar información de forma segura, descentralizada y transparente. Gracias a ella, podemos realizar transacciones o registrar datos sin depender de una sola entidad. Cada bloque contiene datos, un identificador y está conectado criptográficamente con el anterior, creando una cadena incorruptible.
+        Blockchain is a technology that allows storing information securely, decentralized and transparently. Thanks to it, we can perform transactions or record data without depending on a single entity. Each block contains data, an identifier and is cryptographically connected to the previous one, creating an incorruptible chain.
       </motion.p>
 
       <div className="flex justify-center my-12">
         <motion.img
           src="/imagenes/BlockCh/blockIma.jpg"
-          alt="Ilustración Blockchain"
+          alt="Blockchain Illustration"
           className="w-full max-w-md rounded-xl shadow-xl"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -96,7 +96,7 @@ export default function BlockchainInfo() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        Oportunidades de la Blockchain
+        Blockchain Opportunities
       </motion.h3>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto">
